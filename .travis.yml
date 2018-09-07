@@ -17,7 +17,7 @@ install:
   - cd ~/catkin_ws
   - catkin init
   - catkin build
-  - source ~/catkin_ws/setup.bash
+  - source ~/catkin_ws/devel/setup.bash
   
 script:
   - ls
