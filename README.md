@@ -1,8 +1,7 @@
 # FlexBE CI
+[![Build Status](https://travis-ci.org/pschillinger/travis_sandbox.svg?branch=master)](https://travis-ci.org/pschillinger/travis_sandbox)
 
 Continuous integration for FlexBE.
-
-Status: [![Build Status](https://travis-ci.org/pschillinger/travis_sandbox.svg?branch=master)](https://travis-ci.org/pschillinger/travis_sandbox)
 
 ## Usage
 
