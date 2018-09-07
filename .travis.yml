@@ -3,7 +3,6 @@ dist: trusty
 language: generic
 
 before_install:
-  - $PWD
   - source setup.bash
   - flexbe_ci_before_install indigo
   
