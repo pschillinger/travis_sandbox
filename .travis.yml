@@ -5,7 +5,7 @@ language: generic
 before_install:
   - ln -s $PWD ~/flexbe_ci
   - source ~/flexbe_ci/setup.bash
-  - ~/flexbe_ci/ci_scripts/before_install.bash indigo
+  - ~/flexbe_ci/ci_scripts/before_install.bash
   
 install:
   - ~/flexbe_ci/ci_scripts/install.bash
