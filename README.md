@@ -9,7 +9,7 @@ Copy the file `.travis.yml` into the root folder of your repo.
 Substitute
 
     before_install:
-      - ln -s . ~/flexbe_ci
+      - ln -s . ~/flexbe_ci && cd ~
 
 by
 
