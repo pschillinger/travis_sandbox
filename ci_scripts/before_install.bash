@@ -10,4 +10,3 @@ sudo apt-get install -y ros-$ROS_DISTRO-ros-base
 sudo apt-get install -y python-rosinstall python-rosinstall-generator python-wstool build-essential python-catkin-pkg python-rosdep ros-$ROS_DISTRO-catkin python-catkin-tools
 sudo rosdep init
 rosdep update
-source /opt/ros/$ROS_DISTRO/setup.bash

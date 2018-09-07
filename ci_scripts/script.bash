@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+source ~/catkin_ws/devel/setup.bash
+
 # build packages
 cd ~/catkin_ws
 catkin build
