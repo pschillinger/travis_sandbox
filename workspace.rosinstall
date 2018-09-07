@@ -1,0 +1,9 @@
+- git:
+    uri: https://github.com/team-vigir/flexbe_behavior_engine.git
+    version: feature/flexbe_app
+- git:
+    uri: https://github.com/FlexBE/flexbe_app.git
+    version: develop
+- git:
+    uri: https://github.com/FlexBE/generic_flexbe_states.git
+    version: master
