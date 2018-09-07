@@ -40,5 +40,5 @@ script:
   - rosrun flexbe_widget create_repo test
   - cd ~/catkin_ws
   - catkin build
-  - catkin run_tests
+  - catkin run_tests && catkin_test_results
   
