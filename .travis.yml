@@ -2,43 +2,15 @@ sudo: required
 dist: trusty
 language: generic
 
-env:
-  global:
-    - CI_SOURCE=$(pwd)
-    - ROS_PARALLEL_JOBS='-j8'
-
 before_install:
-  - sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-  - sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
-  - sudo apt-get update
-  - sudo apt-get install -y ros-indigo-ros-base
-  - sudo apt-get install -y python-rosinstall python-rosinstall-generator python-wstool build-essential python-catkin-pkg python-rosdep ros-indigo-catkin python-catkin-tools
-  - sudo rosdep init
-  - rosdep update
-  - source /opt/ros/indigo/setup.bash
+  - source setup.bash
+  - flexbe_ci_before_install indigo
   
 install:
-  - mkdir -p ~/catkin_ws/src
-  - cd ~/catkin_ws
-  - catkin init
-  - catkin build
-  - source ~/catkin_ws/devel/setup.bash
+  - flexbe_ci_install
   
 before_script:
-  - cd ~/catkin_ws/src
-  - wstool init
-  - wstool merge $CI_SOURCE/workspace.rosinstall
-  - wstool up
-  - cd ~/catkin_ws
-  - rosdep install -y --from-paths src --ignore-src
+  - flexbe_ci_before_script
   
 script:
-  - cd ~/catkin_ws
-  - catkin build
-  - source ~/catkin_ws/devel/setup.bash
-  - cd ~/catkin_ws/src
-  - rosrun flexbe_widget create_repo test
-  - cd ~/catkin_ws
-  - catkin build
-  - catkin run_tests && catkin_test_results
-  
+  - flexbe_ci_script
