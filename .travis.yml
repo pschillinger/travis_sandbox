@@ -4,9 +4,9 @@ language: generic
 
 before_install:
   - ln -s $PWD ~/flexbe_ci && cd ~
-  - ll flexbe_ci
+  - ls -l flexbe_ci
   - cd flexbe_ci
-  - ll
+  - ls -l
   - cd ~
   - source flexbe_ci/setup.bash
   - flexbe_ci_before_install indigo
