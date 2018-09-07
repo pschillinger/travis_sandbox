@@ -3,7 +3,8 @@ dist: trusty
 language: generic
 
 before_install:
-  - source setup.bash
+  - ln -s . ~/flexbe_ci
+  - source flexbe_ci/setup.bash
   - flexbe_ci_before_install indigo
   
 install:

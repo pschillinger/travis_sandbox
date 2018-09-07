@@ -9,13 +9,12 @@ Copy the file `.travis.yml` into the root folder of your repo.
 Substitute
 
     before_install:
-      - source setup.bash
+      - ln -s . ~/flexbe_ci
 
 by
 
     before_install:
       - cd ~
       - git clone https://github.com/FlexBE/flexbe_ci.git
-      - source flexbe_ci/setup.bash
 
 Happy testing!
