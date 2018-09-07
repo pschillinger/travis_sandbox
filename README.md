@@ -2,6 +2,8 @@
 
 Continuous integration for FlexBE.
 
+Status: [![Build Status](https://travis-ci.org/pschillinger/travis_sandbox.svg?branch=master)](https://travis-ci.org/pschillinger/travis_sandbox)
+
 ## Usage
 
 Copy the file `.travis.yml` into the root folder of your repo.
