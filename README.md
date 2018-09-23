@@ -15,8 +15,7 @@ Substitute
 by
 
     before_install:
-      - cd ~
-      - git clone https://github.com/FlexBE/flexbe_ci.git
+      - git clone https://github.com/FlexBE/flexbe_ci.git ~/flexbe_ci
       - source ~/flexbe_ci/setup.bash
 
 Happy testing!
