@@ -6,9 +6,9 @@ cd ~/catkin_ws/src
 wstool init
 for rosinstall in ~/flexbe_ci/rosinstall/*.rosinstall; do
     if [ "$(basename $rosinstall .rosinstall)" == "$BASE_REPO" ]; then
-        wstool merge $rosinstall
+        ln -s $BASE_PATH ~/catkin_ws/src/$BASE_REPO
     else
-        ln -s $BASE_PATH ~/$BASE_REPO
+        wstool merge $rosinstall
     fi
 done
 wstool up
